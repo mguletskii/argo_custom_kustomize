@@ -5,4 +5,5 @@ bases:
 patches:
   - path: namespace.yaml
   - path: cm_patch.yaml
+  - path: custom.yaml
   
