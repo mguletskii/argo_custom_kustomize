@@ -28,5 +28,5 @@ spec:
       containers:
       - name: argocd-repo-server
         volumeMounts:
-        - mountPath: /
-          name: /custom-tools
+        - mountPath: /custom-tools
+          name: custom-tools
