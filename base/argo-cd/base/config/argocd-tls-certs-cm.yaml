@@ -7,4 +7,3 @@ metadata: # kpt-merge: /argocd-tls-certs-cm
   name: argocd-tls-certs-cm
   annotations:
     internal.kpt.dev/upstream-identifier: '|ConfigMap|default|argocd-tls-certs-cm'
-data:
