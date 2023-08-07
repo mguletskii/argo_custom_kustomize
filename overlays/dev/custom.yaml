@@ -14,12 +14,10 @@ spec:
           command: ["/bin/sh", "-c"]
           args:
             - set -e;
-              set -x;
               wget -O /custom-tools/kustomize.tar.gz https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${VERSION}/kustomize_v${VERSION}_${PLATFORM}_${ARCH}.tar.gz;
               tar -xf /custom-tools/kustomize.tar.gz -C /custom-tools/;
               rm /custom-tools/kustomize.tar.gz;
               mv /custom-tools/kustomize /custom-tools/kustomize_custom;
-              set +x;
           volumeMounts:
             - mountPath: /custom-tools
               name: custom-tools
