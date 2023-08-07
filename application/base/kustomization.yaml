@@ -4,3 +4,12 @@ resources:
 - namespace.yaml
 - deployment.yaml
 - service.yaml
+
+vars:
+- name: ENVIRONMENT
+  objref:
+    kind: Namespace
+    name: argocd
+    apiVersion: v1
+  fieldref:
+    fieldpath: metadata.labels.environment
