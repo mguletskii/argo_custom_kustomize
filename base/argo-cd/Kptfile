@@ -1,0 +1,18 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: argo-cd
+upstream:
+  type: git
+  git:
+    repo: https://github.com/argoproj/argo-cd
+    directory: manifests
+    ref: v2.2.5
+  updateStrategy: force-delete-replace
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/argoproj/argo-cd
+    directory: manifests
+    ref: v2.2.5
+    commit: 8f981ccfcf942a9eb00bc466649f8499ba0455f5

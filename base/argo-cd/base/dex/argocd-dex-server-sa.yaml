@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata: # kpt-merge: /argocd-dex-server
+  labels:
+    app.kubernetes.io/name: argocd-dex-server
+    app.kubernetes.io/part-of: argocd
+    app.kubernetes.io/component: dex-server
+  name: argocd-dex-server
+  annotations:
+    internal.kpt.dev/upstream-identifier: '|ServiceAccount|default|argocd-dex-server'

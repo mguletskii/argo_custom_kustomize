@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: # kpt-merge: /argocd-application-controller-network-policy
+  name: argocd-application-controller-network-policy
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'networking.k8s.io|NetworkPolicy|default|argocd-application-controller-network-policy'
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: argocd-application-controller
+  ingress:
+    - from:
+        - namespaceSelector: {}
+      ports:
+        - port: 8082
+  policyTypes:
+    - Ingress

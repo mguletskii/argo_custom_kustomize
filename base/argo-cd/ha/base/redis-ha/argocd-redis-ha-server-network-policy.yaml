@@ -1,0 +1,21 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata: # kpt-merge: /argocd-redis-ha-server-network-policy
+  name: argocd-redis-ha-server-network-policy
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'networking.k8s.io|NetworkPolicy|default|argocd-redis-ha-server-network-policy'
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: argocd-redis-ha
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/name: argocd-redis-ha-haproxy
+    # Redis HA server pods need to talk to each other
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/name: argocd-redis-ha
