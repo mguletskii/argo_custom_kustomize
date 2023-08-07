@@ -6,8 +6,8 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
-# data:
+data:
 #     kustomize.path.v3.5.1: /custom-tools/kustomize_3_5_1
 #     kustomize.path.v3.5.4: /custom-tools/kustomize_3_5_4
-#     kustomize.path.v5.1.1: /custom-tools/kustomize_5_1_1
+    kustomize.path.v5.1.1: /custom-tools/kustomize_5_1_1
 #     kustomize.path.v6.5.4: /custom-tools/kustomize_6_5_4
