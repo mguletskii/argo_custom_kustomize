@@ -9,7 +9,7 @@ vars:
 - name: ENVIRONMENT
   objref:
     kind: Namespace
-    name: argocd
+    name: guestbook-ui
     apiVersion: v1
   fieldref:
     fieldpath: metadata.labels.environment
