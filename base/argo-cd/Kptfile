@@ -7,12 +7,12 @@ upstream:
   git:
     repo: https://github.com/argoproj/argo-cd
     directory: manifests
-    ref: v2.7.9
+    ref: v2.2.5
   updateStrategy: force-delete-replace
 upstreamLock:
   type: git
   git:
     repo: https://github.com/argoproj/argo-cd
     directory: manifests
-    ref: v2.7.9
-    commit: 0ee33e52dd1f1bb944488584fc6f854b929f1180
+    ref: v2.2.5
+    commit: 8f981ccfcf942a9eb00bc466649f8499ba0455f5
