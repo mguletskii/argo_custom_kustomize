@@ -6,4 +6,5 @@ patches:
   - path: namespace.yaml
   - path: cm_patch.yaml
   - path: custom.yaml
+  - path: argo_patch.yaml
   
